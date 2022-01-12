@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{050DEC9A-1B2F-403D-BFBC-CC4CDB0F6FA8}</ProjectGuid>
+    <ProjectGuid>{4CD2E65F-8724-4CC1-8226-1D630A4CD064}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>WCFClient</RootNamespace>
-    <AssemblyName>WCFClient</AssemblyName>
+    <RootNamespace>HostUI</RootNamespace>
+    <AssemblyName>HostUI</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -35,7 +35,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -55,7 +54,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ServiceProxy.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -82,13 +80,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WCFInterfaces\WCFInterfaces.csproj">
-      <Project>{87727e4a-eb77-4ca1-95ec-e1dd6a621d6d}</Project>
-      <Name>WCFInterfaces</Name>
+    <ProjectReference Include="..\WCFHost\WCFHostControl.csproj">
+      <Project>{ce6b6606-fa09-4789-ad4f-c9c430403894}</Project>
+      <Name>WCFHostControl</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

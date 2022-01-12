@@ -1,7 +1,8 @@
 ﻿using System.ServiceModel;
 using System.ServiceModel.Description;
+using WCFInterfaces;
 
-namespace WCFInterfaces
+namespace WCFClient
 {
     public class ServiceProxy : ClientBase<IWCFService>
     {

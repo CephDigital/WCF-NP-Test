@@ -6,7 +6,7 @@ using System.ServiceModel;
 using System.Text;
 using WCFInterfaces;
 
-namespace WCFTest
+namespace WCFServices
 {
     public class WCFService : IWCFService
     {
